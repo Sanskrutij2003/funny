@@ -1,0 +1,60 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic-zone{
+    position:relative;
+    background-color: aquamarine;
+    border-bottom: 5px solid black;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10%;
+}
+.truck{
+    font-size: 4rem;
+    animation: ride 1s infinite;
+    z-index: 2;
+}
+.tree{
+    position: absolute;
+    font-size: 4rem;
+    z-index: 1;
+    animation: to-right 3s infinite;
+}
+.cloud{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    animation: to-right 4s infinite;
+}
+@keyframes ride{
+    0%{
+        transform: translate(0,10px);
+    }
+    25%{
+        transform: translate(0,8px);
+    }
+    50%{
+        transform: translate(0,10px);
+    }
+    100%{
+        transform: translate(0,8px);
+    }
+}
+@keyframes to-right{
+    0%{
+        transform: translate(-120px,0%);
+    }
+    100%{
+        transform: translate(220px,0%);
+    }
+}
